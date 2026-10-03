@@ -4,6 +4,12 @@ Web belajar merawat diri. **Stage 2 selesai; menunggu tinjauan.** Lima materi me
 
 Lokasi proyek: `C:\Users\Lenovo\OneDrive\Documents\ChatGPT\Bina Diri Project 2`.
 
+## Deployment
+
+Production: [bina-diri.vercel.app](https://bina-diri.vercel.app/).
+
+Proyek Vercel `bina-diri` pada tim `eyreyys-projects` terhubung ke repositori `raypratidina/bina-diri`. Konfigurasi menggunakan Vite, perintah build `npm run build`, dan direktori output `dist`. Rewrite SPA pada `vercel.json` melayani URL materi dengan `index.html`; pemuatan dokumen penuh tetap kembali ke Beranda sesuai handoff. File `.vercel/` dan `.env*` dikecualikan dari Git.
+
 ## Menjalankan di Windows / PowerShell
 
 Diuji dengan Node.js 22.11.0 dan npm 10.9.0. Versi dependensi dikunci dalam package-lock.json.
