@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320"><g stroke="#211D2B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 2 8 5 2 8" fill="none" stroke="#211D2B" stroke-width="2" stroke-linejoin="round"/></marker>
+<g id="brush"><rect x="-7" y="-8" width="14" height="100" rx="7" fill="#81E4B9"/><rect x="-12" y="-45" width="24" height="42" rx="7" fill="white"/><path d="M-10-34H5m-15 10H5m-15 10H5"/></g>
+<g id="cup"><path d="M-25-30H25L20 35H-20Z" fill="white"/><path d="M-22-9H22" stroke="#92C9F5" stroke-width="7"/></g>
+<g id="hand"><path d="M-27 20V-7q0-13 9-9V-29q0-12 9-5v-5q0-12 10-3v10q10-9 10 5v14q10-8 13 4l-3 34q-24 13-48-5Z" fill="#F4C49E"/></g>
+<g id="soap"><rect x="-42" y="-22" width="84" height="44" rx="16" fill="#FF99C2"/><path d="M-22-6Q0-14 22-6" fill="none"/></g>
+<g id="foam" fill="white"><circle cx="-23" cy="0" r="16"/><circle cx="0" cy="-8" r="20"/><circle cx="23" cy="0" r="16"/></g>
+<g id="shirt"><path d="M-25-45-65-22-46 7-30-4V63H30V-4L46 7 65-22 25-45Q0-22-25-45Z" fill="#81E4B9"/><path d="M-25-45Q0-10 25-45M-30 52H30" fill="none"/></g>
+<g id="shoe"><path d="M-49-28Q-20-7-6-36L12-24Q22-4 44 0Q61 5 60 25H-54V-9Q-54-28-49-28Z" fill="white"/><path d="M-54 17H60V30H-54Z" fill="#FFDF57"/><path d="M-4-29 16-16 0 3-21-10Z" fill="#C2ACF3"/></g>
+<g id="spoon"><ellipse cy="-25" rx="14" ry="23" fill="white"/><rect x="-5" y="-3" width="10" height="63" rx="5" fill="#92C9F5"/></g>
+<g id="plate"><ellipse rx="68" ry="40" fill="white"/><ellipse rx="51" ry="28" fill="#FFDF57"/></g>
+<g id="rice"><path d="M-28 8Q-23-22 0-19 24-24 29 8Z" fill="white"/><path d="M-11-3h5M7-7h5"/></g>
+<g id="tap"><path d="M-68-35V-58H10Q33-58 33-34V-13H11V-28Q11-35 3-35Z" fill="white"/><path d="M-24-58V-75m-14 0h28"/><path d="M13 0V30m14-30v40" stroke="#92C9F5" stroke-width="6"/></g>
+<g id="spark"><path d="M0-14 4-4 14 0 4 4 0 14-4 4-14 0-4-4Z" fill="#FFDF57"/></g>
+</defs><path d="M215 140Q240 155 265 140L295 167 284 190 273 180V258H207V180L196 190 185 167Z" fill="#81E4B9" /><g transform="translate(240 98)"><circle r="43" fill="#F4C49E"/><path d="M-42-10Q-44-52 0-46 44-46 43-10L28-25Q10-9-11-24L-29-9Z" fill="#211D2B" /><path d="M-15 1v5m30-5v5"/><ellipse cy="22" rx="16" ry="11" fill="white"/></g><path d="M226 116h28m-21-5v17m14-17v17" fill="none" stroke-width="2"/><use href="#brush" transform="translate(248 120) rotate(-90) scale(0.72)"/><path d="M284 180 313 163 321 124" fill="none" stroke="#211D2B" stroke-width="22"/><path d="M284 180 313 163 321 124" fill="none" stroke="#F4C49E" stroke-width="15"/><path d="M208 137 258 137" fill="none" stroke-width="4" marker-end="url(#arrow)"/></g></svg>

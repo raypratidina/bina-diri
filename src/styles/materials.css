@@ -1,0 +1,28 @@
+@layer components {
+  .material-flow { max-width: 880px; margin-inline: auto; padding-top: var(--space-8); }
+  .learning-header { display: flex; align-items: center; gap: var(--space-6); margin-bottom: var(--space-6); }
+  .learning-activity { font-family: var(--font-display); font-size: var(--text-heading-md); font-weight: 500; }
+  .learning-panel { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); padding: var(--space-8); border: var(--border-default); border-radius: var(--radius-xl); box-shadow: var(--shadow-hard-lg); background: var(--color-surface); text-align: center; }
+  .learning-panel h1 { font-size: var(--text-heading-lg); max-width: 720px; }
+  .learning-illustration { height: clamp(220px, 35vw, 350px); background: var(--activity-color); border-radius: var(--radius-xl); padding: var(--space-4); }
+  .learning-next { width: min(100%, 360px); }
+  .progress-indicator { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+  .progress-label { font-size: var(--text-label-lg); font-weight: 800; }
+  .progress-dots { display: flex; gap: var(--space-2); }
+  .progress-dot { width: 20px; height: 12px; border: var(--border-default); border-radius: var(--radius-full); background: var(--color-surface); }
+  .progress-dot.is-reached { background: var(--activity-color); }
+  .completion-screen { margin-top: var(--space-6); }
+  .completion-mark { width: 56px; height: 56px; display: grid; place-items: center; border: var(--border-default); border-radius: var(--radius-full); background: var(--color-mint); }
+  .completion-screen h1 { font-size: var(--text-display); }
+  .completion-description { font-size: var(--text-body-lg); font-weight: 700; }
+  .completion-actions { width: min(100%, 400px); display: flex; flex-direction: column; gap: var(--space-4); padding-bottom: var(--space-1); }
+  .icon-button { cursor: pointer; }
+}
+@media (max-width: 639px) {
+  .material-flow { padding-top: var(--space-6); }
+  .learning-header { gap: var(--space-4); }
+  .learning-panel { padding: var(--space-6) var(--space-4); }
+  .learning-panel h1 { font-size: var(--text-heading-md); }
+  .learning-illustration { padding: var(--space-2); }
+  .completion-screen h1 { font-size: var(--text-heading-lg); }
+}

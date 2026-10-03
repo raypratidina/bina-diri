@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #211D2B;
+  --color-surface: #FFFFFF;
+  --color-pink: #FF99C2;
+  --color-mint: #81E4B9;
+  --color-yellow: #FFDF57;
+  /* Provisional: exact Toonkit values were unavailable from the reference. */
+  --color-blue: #92C9F5;
+  --color-purple: #C2ACF3;
+  --color-red: #B92E45;
+  --color-canvas: #FFFEF5;
+  --color-muted: #5D5668;
+  --font-display: 'Fredoka Variable', 'Trebuchet MS', sans-serif;
+  --font-body: 'Nunito Variable', Arial, sans-serif;
+  --radius-md: 12px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --shadow-hard-md: 4px 4px 0 var(--color-ink);
+  --shadow-hard-lg: 8px 8px 0 var(--color-ink);
+}
+
+:root {
+  --border-default: 2px solid var(--color-ink);
+  --border-heavy: 4px solid var(--color-ink);
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
+  --text-display: clamp(2.5rem, 6vw, 4rem);
+  --text-heading-lg: clamp(2rem, 4vw, 3rem);
+  --text-heading-md: clamp(1.5rem, 2.5vw, 1.875rem);
+  --text-body-lg: 1.25rem;
+  --text-body-md: 1.125rem;
+  --text-label-lg: 1.125rem;
+  --text-caption: 0.875rem;
+  --motion-press: 180ms;
+}
