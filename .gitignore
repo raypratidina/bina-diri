@@ -4,3 +4,4 @@ dist/
 .reference/
 .verification/
 *.log
+.vercel/

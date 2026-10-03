@@ -1,6 +1,6 @@
 # Bina Diri — Stage 2
 
-Web belajar merawat diri. **Stage 2 selesai; menunggu tinjauan.** Lima materi memiliki intro, enam langkah, dan halaman selesai. Kuis tetap halaman sementara; Stage 3 belum diimplementasikan. Tidak dipublikasikan.
+Web belajar merawat diri. **Stage 2 selesai; menunggu tinjauan.** Lima materi memiliki intro, enam langkah, dan halaman selesai. Kuis tetap halaman sementara; Stage 3 belum diimplementasikan.
 
 Lokasi proyek: `C:\Users\Lenovo\OneDrive\Documents\ChatGPT\Bina Diri Project 2`.
 
