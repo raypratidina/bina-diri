@@ -1,7 +1,5 @@
 import { useEffect, useState, type CSSProperties } from 'react'
-import { Pause, Play } from 'lucide-react'
 import { celebrationLayers } from '../data/celebration'
-import { Button } from './Button'
 import { IllustrationContainer } from './IllustrationContainer'
 import '../styles/celebration.css'
 
@@ -26,7 +24,6 @@ const layers = celebrationLayers.map((layer) => ({
 
 export function CompletionCelebration({ fallbackImage, fallbackAlt }: { fallbackImage: string; fallbackAlt: string }) {
   const [status, setStatus] = useState<'loading' | 'ready' | 'failed'>('loading')
-  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
     let active = true
@@ -43,7 +40,7 @@ export function CompletionCelebration({ fallbackImage, fallbackAlt }: { fallback
 
   return <div className="completion-celebration">
     <svg viewBox="0 0 530 578" width={530} height={578}
-      className={`celebration-scene is-${status}${paused ? ' is-paused' : ''}`}
+      className={`celebration-scene is-${status}`}
       role="img" aria-label="Anak tersenyum mengangkat kedua tangan untuk merayakan keberhasilan belajar.">
       {layers.map(({ id, src, x, y, width, height, style }) => (
         <g key={id} transform={`translate(${x} ${y})`} aria-hidden="true">
@@ -53,9 +50,5 @@ export function CompletionCelebration({ fallbackImage, fallbackAlt }: { fallback
         </g>
       ))}
     </svg>
-    {status === 'ready' && <Button variant="secondary" className="celebration-toggle" onClick={() => setPaused((value) => !value)}>
-      {paused ? <Play size={18} aria-hidden="true" /> : <Pause size={18} aria-hidden="true" />}
-      {paused ? 'Putar animasi' : 'Jeda animasi'}
-    </Button>}
   </div>
 }

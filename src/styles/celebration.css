@@ -6,8 +6,6 @@
 .celebration-scene.is-ready .celebration-layer {
   animation: celebration-translate 2.65s linear infinite, celebration-scale 2.65s linear infinite;
 }
-.celebration-scene.is-paused .celebration-layer { animation-play-state: paused; }
-.celebration-toggle { min-height: 44px; padding: var(--space-2) var(--space-4); font-size: var(--text-label-lg); }
 @keyframes celebration-translate {
   0% { animation-timing-function: ease-in-out; translate: var(--move-0); }
   6.038% { animation-timing-function: ease-out; translate: var(--move-1); }
@@ -54,6 +52,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .celebration-scene.is-ready .celebration-layer { animation: none !important; }
-  .celebration-toggle { display: none; }
 }
 
