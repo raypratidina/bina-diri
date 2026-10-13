@@ -59,3 +59,13 @@ Path berikut relatif terhadap `public/assets/illustrations/figma/`.
 - Contoh intro juga diperiksa pada 390px. Konsol browser tidak mencatat error selama pemeriksaan.
 - PNG asli dipertahankan; total aset sekitar 19 MB. Browser mengambil gambar setiap langkah ketika dibuka dan memakai cache saat digunakan kembali.
 - Batas verifikasi: Chromium desktop dengan emulasi viewport; belum diuji pada perangkat fisik atau screen reader.
+
+## Selebrasi penyelesaian materi — 13 Oktober 2026
+
+- Sumber: [Figma Toonkit, node 86:47](https://www.figma.com/design/xue3V7CP24NSE3nIYOVC3k/Design-System-Toonkit?node-id=86-47), “Selebrasi Berhasil [Vectorized]”.
+- Seluruh 112 aset SVG asli (node 86:48–86:159, total 73.222 byte) disimpan di `public/assets/illustrations/celebration/`, tanpa URL sementara atau penggambaran ulang. Urutan layer dan batas dari desain disimpan di `src/data/celebration.ts`.
+- `CompletionCelebration` digunakan oleh `CompletionScreen` untuk kelima materi. Animasi baru dimulai bersama setelah semua gambar siap; jika gambar gagal dimuat, ilustrasi selesai sebelumnya menjadi fallback. Navigasi tetap tersedia selama pemuatan.
+- Satu siklus 2.650 ms berulang mengikuti cohort Figma. Dua keyframe CSS bersama mempertahankan waktu, easing, scale, serta translation masing-masing layer dari motion context; tidak menambah pustaka animasi. Pembungkus posisi dipisahkan dari pembungkus gerak dengan origin 0,0 dalam koordinat vektor. SVG viewBox 530 × 578 menjaga gerakan saat ukuran berubah.
+- Tersedia tombol “Jeda animasi” / “Putar animasi”. `prefers-reduced-motion: reduce` mematikan animasi dan menyembunyikan kontrol, sehingga ilustrasi tampil diam. Semua layer dekoratif disatukan menjadi satu label gambar yang dapat dibaca pembaca layar.
+- Verifikasi: build produksi dan 6 tes sesi/konten lulus. Browser memeriksa penyelesaian seluruh 5 materi, 112 layer siap, satu putaran penuh, sinkronisasi scale, jeda yang mempertahankan posisi, putar kembali, navigasi ke materi lain, serta kontrol Enter. Ukuran 320, 390, 768, dan 1440px tidak menunjukkan overflow horizontal; konsol tanpa warning/error.
+- Semua posisi pada 20 keyframe sumber berada di dalam viewBox. Seluruh aset non-kosong. Pengurangan gerak ditinjau pada aturan CSS; emulasi preferensi OS, kegagalan jaringan, perangkat fisik, dan pembaca layar belum diuji pada pembaruan ini.

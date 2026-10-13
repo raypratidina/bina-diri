@@ -1,0 +1,59 @@
+/* Figma 86:47: one synchronized 2650 ms cohort, exact exported values. */
+.completion-celebration { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); width: 100%; }
+.celebration-scene { display: block; width: min(100%, 320px); height: auto; aspect-ratio: 530 / 578; overflow: visible; }
+.celebration-scene.is-loading { visibility: hidden; }
+.celebration-layer { transform-origin: 0 0; }
+.celebration-scene.is-ready .celebration-layer {
+  animation: celebration-translate 2.65s linear infinite, celebration-scale 2.65s linear infinite;
+}
+.celebration-scene.is-paused .celebration-layer { animation-play-state: paused; }
+.celebration-toggle { min-height: 44px; padding: var(--space-2) var(--space-4); font-size: var(--text-label-lg); }
+@keyframes celebration-translate {
+  0% { animation-timing-function: ease-in-out; translate: var(--move-0); }
+  6.038% { animation-timing-function: ease-out; translate: var(--move-1); }
+  10.566% { animation-timing-function: ease-out; translate: var(--move-2); }
+  18.113% { animation-timing-function: ease-in; translate: var(--move-3); }
+  26.415% { animation-timing-function: ease-out; translate: var(--move-4); }
+  29.434% { animation-timing-function: ease-out; translate: var(--move-5); }
+  33.962% { animation-timing-function: ease-in-out; translate: var(--move-6); }
+  38.491% { animation-timing-function: ease-out; translate: var(--move-7); }
+  42.642% { animation-timing-function: ease-out; translate: var(--move-8); }
+  49.811% { animation-timing-function: ease-in; translate: var(--move-9); }
+  57.358% { animation-timing-function: ease-out; translate: var(--move-10); }
+  60.377% { animation-timing-function: ease-out; translate: var(--move-11); }
+  64.906% { animation-timing-function: ease-in-out; translate: var(--move-12); }
+  69.057% { animation-timing-function: ease-out; translate: var(--move-13); }
+  73.208% { animation-timing-function: ease-out; translate: var(--move-14); }
+  79.245% { animation-timing-function: ease-in; translate: var(--move-15); }
+  86.038% { animation-timing-function: ease-out; translate: var(--move-16); }
+  88.679% { animation-timing-function: ease-out; translate: var(--move-17); }
+  93.585% { translate: var(--move-18); }
+  100% { translate: var(--move-19); }
+}
+@keyframes celebration-scale {
+  0% { animation-timing-function: ease-in-out; scale: 1 1; }
+  6.038% { animation-timing-function: ease-out; scale: 1.064 0.94; }
+  10.566% { animation-timing-function: ease-out; scale: 0.976 1.025; }
+  18.113% { animation-timing-function: ease-in; scale: 1 1; }
+  26.415% { animation-timing-function: ease-out; scale: 0.985 1.015; }
+  29.434% { animation-timing-function: ease-out; scale: 1.075 0.93; }
+  33.962% { animation-timing-function: ease-in-out; scale: 1 1; }
+  38.491% { animation-timing-function: ease-out; scale: 1.053 0.95; }
+  42.642% { animation-timing-function: ease-out; scale: 0.976 1.025; }
+  49.811% { animation-timing-function: ease-in; scale: 1 1; }
+  57.358% { animation-timing-function: ease-out; scale: 0.985 1.015; }
+  60.377% { animation-timing-function: ease-out; scale: 1.058 0.945; }
+  64.906% { animation-timing-function: ease-in-out; scale: 1 1; }
+  69.057% { animation-timing-function: ease-out; scale: 1.042 0.96; }
+  73.208% { animation-timing-function: ease-out; scale: 0.98 1.02; }
+  79.245% { animation-timing-function: ease-in; scale: 1 1; }
+  86.038% { animation-timing-function: ease-out; scale: 0.99 1.01; }
+  88.679% { animation-timing-function: ease-out; scale: 1.042 0.96; }
+  93.585% { scale: 1 1; }
+  100% { scale: 1 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .celebration-scene.is-ready .celebration-layer { animation: none !important; }
+  .celebration-toggle { display: none; }
+}
+
