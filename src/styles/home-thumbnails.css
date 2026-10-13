@@ -1,0 +1,9 @@
+@import './home-thumbnails-motion.css';
+
+.home-thumbnail-scene { position: absolute; width: auto; height: 100%; max-width: 100%; aspect-ratio: 1; overflow: visible; visibility: hidden; }
+.home-thumbnail-scene.is-ready { visibility: visible; }
+.home-thumbnail-layer { transform-origin: 0 0; animation-duration: var(--thumbnail-duration); animation-timing-function: linear; animation-iteration-count: infinite; animation-play-state: paused; }
+.home-thumbnail-scene.is-ready .home-thumbnail-layer { animation-play-state: running; }
+@media (prefers-reduced-motion: reduce) {
+  .home-thumbnail-layer { animation: none !important; transform: none !important; }
+}

@@ -91,6 +91,8 @@ Build dan enam pengujian otomatis lulus. Seluruh 30 langkah diuji di Chromium pa
 
 ## Optimasi gambar
 
+Thumbnail Beranda Materi dan Kuis memakai karakter serta animasi terbaru dari Figma node 110:1191. Detail pemetaan dan verifikasi ada di `docs/HOME_THUMBNAILS.md`.
+
 Seluruh 35 PNG materi memiliki salinan WebP lossless: total 16.184.383 → 10.393.442 byte (berkurang 35,8%). Resolusi dan piksel RGBA identik, termasuk transparansi; aset Figma asli tetap disimpan. Rincian ukuran ada di `docs/IMAGE_OPTIMIZATION.json`. Angka ini adalah pengurangan ukuran file, bukan pengukuran waktu muat jaringan pengguna.
 
 Intro menyiapkan gambar langkah pertama, dan setiap langkah menyiapkan satu gambar berikutnya dengan prioritas rendah. Prefetch dilewati saat browser mengaktifkan Save-Data. File WebP bernama hash mendapat cache browser satu tahun melalui `vercel.json`; perubahan gambar menghasilkan URL baru. Header ini berlaku setelah deployment dan belum diuji pada production untuk branch ini.
