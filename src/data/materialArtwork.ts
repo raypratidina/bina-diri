@@ -6,7 +6,7 @@ const portrait = (path: string, imageAlt: string): MaterialArtwork => ({
 })
 
 const dressedChild = portrait('dressing/tidy-shirt', 'Anak memakai kaos bersih dan merapikan bagian bawahnya.')
-// Exact image bounds emitted by Figma for nodes 74:4 and 74:5.
+// Exact image bounds emitted by Figma for node 74:4.
 const brushingCloseUp = { width: 181.82, height: 166.67, left: -40.91, top: -6.67 }
 
 export const materialArtwork: Partial<Record<string, {
@@ -17,11 +17,10 @@ export const materialArtwork: Partial<Record<string, {
   'tooth-brushing': {
     thumbnail: portrait('tooth-brushing/thumbnail', 'Anak memegang sikat gigi di dekat mulut, siap menggosok gigi.'),
     steps: [
-      // The supplied set has no taking-a-toothbrush illustration; keep the matching original.
-      { image: '/assets/illustrations/materials/tooth-brushing/1.svg', imageAlt: 'Tangan mengambil sikat gigi dari gelas.' },
-      portrait('tooth-brushing/apply-toothpaste', 'Anak memberi pasta gigi pada bulu sikat.'),
+      portrait('tooth-brushing/take-brush', 'Tampak dekat tangan mengambil sikat gigi dari gelas di atas meja.'),
+      portrait('tooth-brushing/apply-toothpaste', 'Tampak dekat tangan memberi pasta gigi pada bulu sikat.'),
       { ...portrait('tooth-brushing/brush-front', 'Tampak dekat anak menyikat gigi bagian depan.'), imageCrop: brushingCloseUp },
-      { ...portrait('tooth-brushing/brush-sides', 'Tampak dekat anak menggerakkan sikat pada gigi bagian samping.'), imageCrop: brushingCloseUp },
+      portrait('tooth-brushing/brush-sides', 'Tampak dekat anak menggerakkan sikat pada gigi bagian samping.'),
       portrait('tooth-brushing/rinse-mouth', 'Anak berkumur sambil memegang gelas air.'),
       portrait('tooth-brushing/clean-brush', 'Anak membilas sikat gigi di bawah air keran.'),
     ],
@@ -42,10 +41,10 @@ export const materialArtwork: Partial<Record<string, {
     thumbnail: portrait('dressing/thumbnail', 'Kaos bersih berwarna biru kehijauan.'),
     steps: [
       portrait('dressing/take-shirt', 'Anak mengambil dan memegang kaos bersih di depan tubuh.'),
-      portrait('dressing/head-through-shirt', 'Kepala anak sudah melewati lubang leher kaos.'),
-      // The source layer labels are reversed; use the child's anatomical right/left.
-      portrait('dressing/right-arm', 'Anak memasukkan lengan kanan, di kiri gambar, ke dalam lengan kaos.'),
-      portrait('dressing/left-arm', 'Anak memasukkan lengan kiri, di kanan gambar, ke dalam lengan kaos.'),
+      portrait('dressing/head-through-shirt', 'Anak menarik lubang leher kaos melewati kepala.'),
+      // Revised source nodes now match the child's anatomical right/left.
+      portrait('dressing/right-arm', 'Tampak dekat lengan kanan anak, di kiri gambar, melewati lengan kaos.'),
+      portrait('dressing/left-arm', 'Tampak dekat lengan kiri anak, di kanan gambar, melewati lengan kaos.'),
       portrait('dressing/pull-shirt-down', 'Anak menarik bagian bawah kaos ke bawah dengan kedua tangan.'),
       dressedChild,
     ],

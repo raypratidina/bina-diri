@@ -1,6 +1,25 @@
 # Pemetaan aset Figma — 13 Oktober 2026
 
-## Pembaruan terbaru di branch lokal
+## Iterasi terbaru untuk MVP-1
+
+Sumber: [Asset 82:42](https://www.figma.com/design/xue3V7CP24NSE3nIYOVC3k/Design-System-Toonkit?node-id=82-42). Pembaruan lokal sebelumnya digabungkan ke branch `MVP-1` untuk diterbitkan sesuai permintaan pengguna.
+
+Dibandingkan dengan commit lokal `8f3ce7d`, lima PNG berubah dan satu PNG baru tersedia. Sebanyak 29 aset lama lainnya identik; thumbnail duplikat `77:2` juga identik dengan `82:41` dan tidak ditambahkan ulang. File asli dipertahankan, tanpa menggambar ulang atau mencerminkan gambar.
+
+| Pemakaian | File relatif terhadap `public/assets/illustrations/figma/` | Node | Penyesuaian |
+| --- | --- | --- | --- |
+| Gigi langkah 1 | `tooth-brushing/take-brush.png` | `99:2` | Gambar baru mengambil sikat menggantikan SVG lama |
+| Gigi langkah 2 | `tooth-brushing/apply-toothpaste.png` | `74:3` | Ganti dengan close-up tangan dan pasta |
+| Gigi langkah 4 | `tooth-brushing/brush-sides.png` | `74:5` | Ganti dengan wajah dari samping; hapus crop pembesaran lama |
+| Baju langkah 2 | `dressing/head-through-shirt.png` | `76:4` | Ganti dengan kaos sedang melewati kepala |
+| Baju langkah 3 | `dressing/right-arm.png` | `76:5` | Label sumber kini sesuai anatomi kanan; menggantikan pemetaan node 76:6 |
+| Baju langkah 4 | `dressing/left-arm.png` | `76:6` | Label sumber kini sesuai anatomi kiri; menggantikan pemetaan node 76:5 |
+
+Semua gambar memakai slot portrait 530 × 578. Crop khusus 181,82% × 166,67% dengan offset −40,91% / −6,67% hanya berlaku pada `74:4` (menyikat depan). Alt text keenam slot disesuaikan, sedangkan instruksi serta urutan materi tetap sama. Animasi selebrasi tetap berulang tanpa tombol jeda.
+
+Verifikasi iterasi: build produksi dan enam tes lulus. Semua 12 langkah Menggosok Gigi/Memakai Baju mencapai halaman selesai di Chromium pada 320px. Enam slot yang berubah diperiksa secara visual, gambar termuat, rasio bingkai sesuai, crop samping kembali 100%, serta tidak ada overflow horizontal atau error konsol. Gambar mengambil sikat juga diperiksa pada ukuran browser desktop. Seluruh file lokal cocok dengan hash unduhan sumber terbaru setelah koreksi pemetaan kanan/kiri. Perangkat fisik dan pembaca layar belum diuji.
+
+## Riwayat pembaruan di branch lokal
 
 Sumber: [Characters 73:127](https://www.figma.com/design/xue3V7CP24NSE3nIYOVC3k/Design-System-Toonkit?node-id=73-127). Branch: `codex/update-character-assets`. Pembaruan ini tidak di-push dan tidak di-deploy.
 
