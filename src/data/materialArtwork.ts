@@ -6,12 +6,26 @@ const portrait = (path: string, imageAlt: string): MaterialArtwork => ({
 })
 
 const dressedChild = portrait('dressing/tidy-shirt', 'Anak memakai kaos bersih dan merapikan bagian bawahnya.')
+// Exact image bounds emitted by Figma for nodes 74:4 and 74:5.
+const brushingCloseUp = { width: 181.82, height: 166.67, left: -40.91, top: -6.67 }
 
 export const materialArtwork: Partial<Record<string, {
   thumbnail: MaterialArtwork
   intro?: MaterialArtwork
   steps: [MaterialArtwork, MaterialArtwork, MaterialArtwork, MaterialArtwork, MaterialArtwork, MaterialArtwork]
 }>> = {
+  'tooth-brushing': {
+    thumbnail: portrait('tooth-brushing/thumbnail', 'Anak memegang sikat gigi di dekat mulut, siap menggosok gigi.'),
+    steps: [
+      // The supplied set has no taking-a-toothbrush illustration; keep the matching original.
+      { image: '/assets/illustrations/materials/tooth-brushing/1.svg', imageAlt: 'Tangan mengambil sikat gigi dari gelas.' },
+      portrait('tooth-brushing/apply-toothpaste', 'Anak memberi pasta gigi pada bulu sikat.'),
+      { ...portrait('tooth-brushing/brush-front', 'Tampak dekat anak menyikat gigi bagian depan.'), imageCrop: brushingCloseUp },
+      { ...portrait('tooth-brushing/brush-sides', 'Tampak dekat anak menggerakkan sikat pada gigi bagian samping.'), imageCrop: brushingCloseUp },
+      portrait('tooth-brushing/rinse-mouth', 'Anak berkumur sambil memegang gelas air.'),
+      portrait('tooth-brushing/clean-brush', 'Anak membilas sikat gigi di bawah air keran.'),
+    ],
+  },
   bathing: {
     thumbnail: portrait('bathing/thumbnail', 'Pancuran mengalirkan air untuk mandi.'),
     intro: portrait('bathing/intro', 'Anak mandi di bawah pancuran sambil membersihkan tubuh.'),

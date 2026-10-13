@@ -4,6 +4,8 @@ export interface MaterialArtwork {
   image: string
   imageAlt: string
   imageLayout?: 'portrait'
+  /** Image bounds as percentages of the Figma portrait slot. */
+  imageCrop?: { width: number; height: number; left: number; top: number }
 }
 
 export interface MaterialSummary extends MaterialArtwork {

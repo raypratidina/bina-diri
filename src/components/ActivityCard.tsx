@@ -5,7 +5,7 @@ import { IllustrationContainer } from './IllustrationContainer'
 
 export function ActivityCard({ material }: { material: MaterialSummary }) {
   return <Link to={`/materials/${material.id}`} className={`activity-card pressable theme-${material.theme}`} aria-labelledby={`title-${material.id}`}>
-    <IllustrationContainer src={material.image} alt={material.imageAlt} layout={material.imageLayout} eager />
+    <IllustrationContainer src={material.image} alt={material.imageAlt} layout={material.imageLayout} crop={material.imageCrop} eager />
     <div className="activity-card-label"><h2 id={`title-${material.id}`}>{material.title}</h2><span className="round-arrow"><ArrowUpRight size={22} aria-hidden="true" /></span></div>
   </Link>
 }

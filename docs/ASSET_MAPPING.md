@@ -1,5 +1,30 @@
 # Pemetaan aset Figma — 13 Oktober 2026
 
+## Pembaruan terbaru di branch lokal
+
+Sumber: [Characters 73:127](https://www.figma.com/design/xue3V7CP24NSE3nIYOVC3k/Design-System-Toonkit?node-id=73-127). Branch: `codex/update-character-assets`. Pembaruan ini tidak di-push dan tidak di-deploy.
+
+- 28 PNG pada tabel integrasi awal disegarkan dari node yang sama; enam PNG Menggosok Gigi ditambahkan. Total 34 PNG asli berukuran 1024 × 1024, 16.360.848 byte. Berkas asli tidak diedit; semua non-kosong dan cocok dengan unduhan sumber terbaru.
+- Node Menggosok Gigi `74:2` menjadi kartu dan intro. Langkah “Ambil sikat gigi” tetap memakai SVG sebelumnya karena node tersebut menggambarkan anak sedang menyikat, bukan mengambil sikat. Node `74:7` dipasang pada langkah 5 (berkumur), lalu `74:6` pada langkah 6 (membersihkan sikat), mengikuti urutan materi.
+- Crop jarak dekat pada `74:4` dan `74:5` dipertahankan sebagai metadata `imageCrop`: lebar 181,82%, tinggi 166,67%, kiri −40,91%, atas −6,67% terhadap bingkai 530 × 578. `IllustrationContainer` memotong tampilan dalam bingkai tanpa memodifikasi PNG. Crop diteruskan melalui kartu serta halaman materi.
+- Pemetaan kanan/kiri baju tetap mengikuti anatomi anak seperti keputusan integrasi awal. `77:2` dan `82:41` tetap duplikat thumbnail makan, sehingga hanya satu berkas digunakan.
+- Animasi selesai tetap berulang tanpa tombol jeda. Teks handoff dan urutan belajar tidak berubah.
+
+Path berikut relatif terhadap `public/assets/illustrations/figma/`.
+
+| Pemakaian | File | Node Figma |
+| --- | --- | --- |
+| Kartu dan intro Menggosok Gigi | `tooth-brushing/thumbnail.png` | `74:2` |
+| Langkah 2: beri pasta | `tooth-brushing/apply-toothpaste.png` | `74:3` |
+| Langkah 3: sikat depan | `tooth-brushing/brush-front.png` | `74:4` |
+| Langkah 4: sikat samping | `tooth-brushing/brush-sides.png` | `74:5` |
+| Langkah 5: berkumur | `tooth-brushing/rinse-mouth.png` | `74:7` |
+| Langkah 6: bersihkan sikat | `tooth-brushing/clean-brush.png` | `74:6` |
+
+Verifikasi lokal: build produksi dan 6 tes konten/sesi lulus. Semua 30 langkah dan 5 intro diperiksa di Chromium pada 320px; semua gambar termuat tanpa overflow horizontal. Crop aktual langkah menyikat depan/samping sesuai persentase sumber dalam bingkai 187,05 × 204px. Pengujian perangkat fisik dan pembaca layar belum dilakukan.
+
+## Riwayat integrasi awal
+
 Sumber: [Toonkit, bagian Asset 82:42](https://www.figma.com/design/xue3V7CP24NSE3nIYOVC3k/Design-System-Toonkit?node-id=82-42).
 
 28 PNG asli (1024 × 1024) disimpan di `public/assets/illustrations/figma/`. Gambar tidak digambar ulang, dicerminkan, atau diubah. Tampilan mengikuti slot Figma 530 × 578, `object-fit: cover` terpusat. URL sementara Figma tidak dipakai oleh aplikasi.
