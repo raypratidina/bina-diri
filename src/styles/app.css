@@ -65,6 +65,9 @@
   .theme-purple { --activity-color: var(--color-purple); }
   .illustration { position: relative; width: 100%; height: 220px; display: grid; place-items: center; flex-shrink: 0; }
   .illustration img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; padding: inherit; }
+  /* Figma's artwork slots are 530 × 578, with centered cover on square originals. */
+  .illustration-portrait-frame { position: relative; height: 100%; aspect-ratio: 530 / 578; max-width: 100%; min-height: 0; overflow: hidden; border-radius: var(--radius-md); }
+  .illustration--portrait img { object-fit: cover; padding: 0; }
   .image-fallback { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--space-3); font-size: var(--text-caption); text-align: center; }
   .placeholder-panel, .error-panel { max-width: 800px; margin-inline: auto; padding: var(--space-12); display: flex; flex-direction: column; align-items: center; gap: var(--space-8); text-align: center; border: var(--border-default); border-radius: var(--radius-xl); box-shadow: var(--shadow-hard-lg); background: var(--color-surface); }
   .placeholder-panel .illustration { max-width: 360px; height: 260px; padding: var(--space-6); background: var(--activity-color); border-radius: var(--radius-xl); }

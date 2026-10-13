@@ -1,4 +1,5 @@
 import type { Material, MaterialSummary } from '../types/material'
+import { materialArtwork } from './materialArtwork.js'
 
 const catalog: MaterialSummary[] = [
   { id: 'tooth-brushing', title: 'Menggosok Gigi', theme: 'pink', image: '/assets/illustrations/activities/tooth-brushing.svg', imageAlt: 'Sikat gigi dan gigi yang bersih' },
@@ -73,13 +74,15 @@ const content: Record<string, { intro: string; completion: string; steps: [strin
 
 export const materials: Material[] = catalog.map(item => {
   const detail = content[item.id]
+  const artwork = materialArtwork[item.id]
   const steps = detail.steps.map(([text, imageAlt], index) => ({
-    id: `${item.id}-${index + 1}`, text, imageAlt,
-    image: `/assets/illustrations/materials/${item.id}/${index + 1}.svg`,
+    id: `${item.id}-${index + 1}`, text,
+    ...(artwork?.steps[index] ?? { image: `/assets/illustrations/materials/${item.id}/${index + 1}.svg`, imageAlt }),
   }))
   return {
     ...item,
-    intro: { text: detail.intro, image: item.image, imageAlt: item.imageAlt },
+    ...artwork?.thumbnail,
+    intro: { text: detail.intro, ...(artwork?.intro ?? artwork?.thumbnail ?? { image: item.image, imageAlt: item.imageAlt }) },
     steps,
     completion: { text: detail.completion, image: '/assets/illustrations/system/celebrate.svg', imageAlt: 'Anak tersenyum sambil mengangkat kedua tangan.' },
   }

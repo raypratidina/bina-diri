@@ -80,7 +80,7 @@ function MaterialJourney({ material }: { material: Material }) {
       <section className="learning-panel" aria-label={material.title}>
         {isLearning && <ProgressIndicator current={session.currentStepIndex + 1} total={material.steps.length} />}
         <h1 tabIndex={-1} aria-describedby={isLearning ? 'material-progress' : undefined}>{isIntro ? material.intro.text : step.text}</h1>
-        <IllustrationContainer key={isIntro ? 'intro' : step.id} src={isIntro ? material.intro.image : step.image} alt={isIntro ? material.intro.imageAlt : step.imageAlt} className="learning-illustration" eager />
+        <IllustrationContainer key={isIntro ? 'intro' : step.id} src={isIntro ? material.intro.image : step.image} alt={isIntro ? material.intro.imageAlt : step.imageAlt} layout={isIntro ? material.intro.imageLayout : step.imageLayout} className="learning-illustration" eager />
         <Button className="learning-next" onClick={() => send(isIntro ? 'start' : 'next')}>{isIntro ? <><Play size={22} aria-hidden="true" />Mulai</> : <>Lanjut<ArrowRight size={22} aria-hidden="true" /></>}</Button>
       </section>
     </>}

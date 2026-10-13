@@ -53,12 +53,14 @@ Pratinjau build: http://127.0.0.1:4173/. `npm` juga dapat digunakan jika kebijak
 - `src/data/materials.ts`: katalog, intro, 30 langkah, dan teks selesai.
 - `src/features/materials`: daftar, tampilan bersama, state dan transisi sesi. `src/features/quiz`: placeholder.
 - `src/styles/tokens.css`: sumber token; `app.css` dan `materials.css`: tata letak serta interaksi.
-- `public/assets/illustrations`: SVG sederhana; 30 adegan langkah di `materials/` dan ilustrasi selesai bersama. Ganti melalui path data/props.
-- `scripts/generate-material-art.mjs`: sumber pembentukan SVG langkah; jalankan `node scripts/generate-material-art.mjs` untuk menghasilkan ulang aset tersebut.
+- `public/assets/illustrations/figma`: 28 PNG asli Figma untuk Mandi, Memakai Baju, Makan Sendiri, dan Memakai Sepatu. Pemetaan eksplisit ada di `src/data/materialArtwork.ts`.
+- `public/assets/illustrations`: aset SVG lama untuk Menggosok Gigi, Beranda, dan halaman selesai tetap digunakan.
+- `scripts/generate-material-art.mjs`: pembentuk SVG awal; tidak mengubah PNG Figma yang sekarang dipakai.
 - `tests/material-session.test.mjs`: enam pengujian isi handoff, kelengkapan aset, batas langkah, reset, dan ketukan cepat; tidak menambah dependensi pengujian.
 - `docs/BINA_DIRI_CODEX_HANDOFF.md`: salinan spesifikasi.
 - `docs/STAGE_1_VERIFICATION.md`: hasil pemeriksaan aktual.
 - `docs/STAGE_2_VERIFICATION.md`: hasil pemeriksaan Stage 2.
+- `docs/ASSET_MAPPING.md`: sumber node Figma, penyesuaian kanan/kiri, pemetaan tiap gambar, dan hasil verifikasi pembaruan aset.
 
 ## Dependensi terpasang
 
@@ -82,7 +84,7 @@ Token handoff: Ink #211D2B, Surface #FFFFFF, Pink #FF99C2, Mint #81E4B9, Yellow 
 
 Fredoka dan Nunito berasal dari Fontsource, berlisensi OFL-1.1 (lisensi pada paket). Browser mengonfirmasi kedua font termuat. Tidak ada permintaan Google Fonts saat aplikasi berjalan.
 
-Kartu dan intro memakai gambar benda dari Stage 1. Stage 2 menambah 30 ilustrasi tindakan sederhana dengan tokoh/benda yang dipakai ulang, termasuk kepala/lengan saat memakai kaos serta sepatu perekat tanpa tali. Seluruh ilustrasi masih aset representatif yang perlu tinjauan pengguna, bukan produksi artwork final. Gambar kuis aktivitas pada Stage 3 masih perlu dipilih secara khusus; kuis belum dibuat.
+Pembaruan 13 Oktober 2026 menerapkan aset asli Figma node 82:42 untuk empat materi, termasuk ilustrasi sepatu bertali. Gambar dipasang pada kartu, intro, dan langkah yang sesuai, dengan rasio slot 530 × 578 serta alt text yang diperbarui. Aset Menggosok Gigi belum tersedia pada bagian Figma tersebut, sehingga memakai SVG sebelumnya. Ilustrasi selesai bersama dan Beranda tetap memakai aset awal. Gambar kuis aktivitas pada Stage 3 masih perlu dipilih secara khusus; kuis belum dibuat.
 
 Build dan enam pengujian otomatis lulus. Seluruh 30 langkah diuji di Chromium pada 320px. Contoh langkah dan halaman selesai diperiksa pada 320, 390, 768, 1440px tanpa overflow. Uji keyboard, ketukan ganda, fallback gambar, reset, dan penjagaan sesi lulus. Detail serta batas pengujian ada di laporan Stage 2.
 
