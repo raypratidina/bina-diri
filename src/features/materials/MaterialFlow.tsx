@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Play } from 'lucide-react'
 import { materials } from '../../data/materials'
@@ -29,6 +29,19 @@ function MaterialJourney({ material }: { material: Material }) {
   const isLearning = page === `${base}/learn`
   const isComplete = page === `${base}/complete`
   const validSession = isIntro || (isLearning && session.phase === 'learning') || (isComplete && session.phase === 'complete')
+  const nextImage = validSession
+    ? material.steps[isIntro ? 0 : isLearning ? session.currentStepIndex + 1 : material.steps.length]?.image
+    : undefined
+
+  useEffect(() => {
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+    if (!nextImage || connection?.saveData) return
+    // Warm only the next step, at low priority so the visible image comes first.
+    const image = new Image()
+    image.fetchPriority = 'low'
+    image.decoding = 'async'
+    image.src = nextImage
+  }, [nextImage])
 
   useLayoutEffect(() => {
     // Browser Back to intro resets; revisiting starts a fresh learning flow.

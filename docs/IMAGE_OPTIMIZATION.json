@@ -1,0 +1,184 @@
+{
+  "count": 35,
+  "originalBytes": 16184383,
+  "optimizedBytes": 10393442,
+  "reductionPercent": 35.8,
+  "pixelIdentical": true,
+  "images": [
+    {
+      "key": "bathing/dry-body",
+      "originalBytes": 587196,
+      "optimizedBytes": 387168
+    },
+    {
+      "key": "bathing/intro",
+      "originalBytes": 626196,
+      "optimizedBytes": 427578
+    },
+    {
+      "key": "bathing/rinse-body",
+      "originalBytes": 632755,
+      "optimizedBytes": 414348
+    },
+    {
+      "key": "bathing/thumbnail",
+      "originalBytes": 255528,
+      "optimizedBytes": 170144
+    },
+    {
+      "key": "bathing/use-soap",
+      "originalBytes": 694651,
+      "optimizedBytes": 455332
+    },
+    {
+      "key": "bathing/wash-body",
+      "originalBytes": 953925,
+      "optimizedBytes": 615388
+    },
+    {
+      "key": "bathing/wet-body",
+      "originalBytes": 1032890,
+      "optimizedBytes": 684306
+    },
+    {
+      "key": "dressing/head-through-shirt",
+      "originalBytes": 356382,
+      "optimizedBytes": 218794
+    },
+    {
+      "key": "dressing/left-arm",
+      "originalBytes": 328846,
+      "optimizedBytes": 192538
+    },
+    {
+      "key": "dressing/pull-shirt-down",
+      "originalBytes": 409164,
+      "optimizedBytes": 256702
+    },
+    {
+      "key": "dressing/right-arm",
+      "originalBytes": 296521,
+      "optimizedBytes": 178730
+    },
+    {
+      "key": "dressing/take-shirt",
+      "originalBytes": 401922,
+      "optimizedBytes": 259856
+    },
+    {
+      "key": "dressing/thumbnail",
+      "originalBytes": 349512,
+      "optimizedBytes": 203570
+    },
+    {
+      "key": "dressing/tidy-shirt",
+      "originalBytes": 428635,
+      "optimizedBytes": 276286
+    },
+    {
+      "key": "eating/chew",
+      "originalBytes": 452274,
+      "optimizedBytes": 288110
+    },
+    {
+      "key": "eating/food-to-mouth",
+      "originalBytes": 544294,
+      "optimizedBytes": 351034
+    },
+    {
+      "key": "eating/sit-at-table",
+      "originalBytes": 436517,
+      "optimizedBytes": 278930
+    },
+    {
+      "key": "eating/take-food",
+      "originalBytes": 520448,
+      "optimizedBytes": 334926
+    },
+    {
+      "key": "eating/thumbnail",
+      "originalBytes": 400166,
+      "optimizedBytes": 260198
+    },
+    {
+      "key": "eating/tidy-table",
+      "originalBytes": 452940,
+      "optimizedBytes": 290530
+    },
+    {
+      "key": "eating/wash-hands",
+      "originalBytes": 497234,
+      "optimizedBytes": 326374
+    },
+    {
+      "key": "shoes/fasten-shoes",
+      "originalBytes": 557151,
+      "optimizedBytes": 370346
+    },
+    {
+      "key": "shoes/left-foot",
+      "originalBytes": 423497,
+      "optimizedBytes": 273974
+    },
+    {
+      "key": "shoes/right-foot",
+      "originalBytes": 513813,
+      "optimizedBytes": 337886
+    },
+    {
+      "key": "shoes/sit",
+      "originalBytes": 348816,
+      "optimizedBytes": 219558
+    },
+    {
+      "key": "shoes/take-shoes",
+      "originalBytes": 365541,
+      "optimizedBytes": 229062
+    },
+    {
+      "key": "shoes/thumbnail",
+      "originalBytes": 283246,
+      "optimizedBytes": 177712
+    },
+    {
+      "key": "shoes/tidy-shoes",
+      "originalBytes": 409026,
+      "optimizedBytes": 256824
+    },
+    {
+      "key": "tooth-brushing/apply-toothpaste",
+      "originalBytes": 205736,
+      "optimizedBytes": 126460
+    },
+    {
+      "key": "tooth-brushing/brush-front",
+      "originalBytes": 426812,
+      "optimizedBytes": 274492
+    },
+    {
+      "key": "tooth-brushing/brush-sides",
+      "originalBytes": 427377,
+      "optimizedBytes": 263384
+    },
+    {
+      "key": "tooth-brushing/clean-brush",
+      "originalBytes": 436028,
+      "optimizedBytes": 281972
+    },
+    {
+      "key": "tooth-brushing/rinse-mouth",
+      "originalBytes": 415629,
+      "optimizedBytes": 264514
+    },
+    {
+      "key": "tooth-brushing/take-brush",
+      "originalBytes": 344614,
+      "optimizedBytes": 209870
+    },
+    {
+      "key": "tooth-brushing/thumbnail",
+      "originalBytes": 369101,
+      "optimizedBytes": 236546
+    }
+  ]
+}

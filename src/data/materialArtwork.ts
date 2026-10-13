@@ -1,8 +1,9 @@
 import type { MaterialArtwork } from '../types/material'
+import { optimizedArtwork } from './optimizedArtwork.js'
 
-// Original Figma artwork, stored locally. Node-to-step mapping: docs/ASSET_MAPPING.md.
+// Lossless copies of the original Figma artwork. Mapping: docs/ASSET_MAPPING.md.
 const portrait = (path: string, imageAlt: string): MaterialArtwork => ({
-  image: `/assets/illustrations/figma/${path}.png`, imageAlt, imageLayout: 'portrait',
+  image: optimizedArtwork[path], imageAlt, imageLayout: 'portrait',
 })
 
 const dressedChild = portrait('dressing/tidy-shirt', 'Anak memakai kaos bersih dan merapikan bagian bawahnya.')

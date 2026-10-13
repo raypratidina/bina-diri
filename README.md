@@ -53,8 +53,9 @@ Pratinjau build: http://127.0.0.1:4173/. `npm` juga dapat digunakan jika kebijak
 - `src/data/materials.ts`: katalog, intro, 30 langkah, dan teks selesai.
 - `src/features/materials`: daftar, tampilan bersama, state dan transisi sesi. `src/features/quiz`: placeholder.
 - `src/styles/tokens.css`: sumber token; `app.css` dan `materials.css`: tata letak serta interaksi.
-- `public/assets/illustrations/figma`: 28 PNG asli Figma untuk Mandi, Memakai Baju, Makan Sendiri, dan Memakai Sepatu. Pemetaan eksplisit ada di `src/data/materialArtwork.ts`.
-- `public/assets/illustrations`: aset SVG lama untuk Menggosok Gigi, Beranda, dan halaman selesai tetap digunakan.
+- `public/assets/illustrations/figma`: 35 PNG asli Figma untuk kelima materi. Pemetaan eksplisit ada di `src/data/materialArtwork.ts`.
+- `public/assets/illustrations/optimized`: salinan WebP lossless yang dipakai aplikasi; nama file berisi hash konten untuk cache yang aman.
+- `public/assets/illustrations`: SVG Beranda dan aset fallback tetap tersedia.
 - `scripts/generate-material-art.mjs`: pembentuk SVG awal; tidak mengubah PNG Figma yang sekarang dipakai.
 - `tests/material-session.test.mjs`: enam pengujian isi handoff, kelengkapan aset, batas langkah, reset, dan ketukan cepat; tidak menambah dependensi pengujian.
 - `docs/BINA_DIRI_CODEX_HANDOFF.md`: salinan spesifikasi.
@@ -87,6 +88,16 @@ Fredoka dan Nunito berasal dari Fontsource, berlisensi OFL-1.1 (lisensi pada pak
 Pembaruan 13 Oktober 2026 menerapkan aset asli Figma node 82:42 untuk empat materi, termasuk ilustrasi sepatu bertali. Gambar dipasang pada kartu, intro, dan langkah yang sesuai, dengan rasio slot 530 × 578 serta alt text yang diperbarui. Pembaruan lanjutan dari halaman Characters 73:127 menyegarkan 28 PNG tersebut dan menambah enam PNG Menggosok Gigi untuk kartu/intro serta langkah 2–6. Iterasi berikutnya dari Asset 82:42 melengkapi langkah mengambil sikat, memperbarui adegan pasta gigi dan menyikat samping, serta tiga langkah memakai baju. Crop khusus hanya dipakai pada langkah menyikat depan; gambar samping terbaru sudah jarak dekat. Seluruh langkah kini memakai aset Figma. Halaman selesai kelima materi memakai selebrasi Figma node 86:47: gerakan melompat berulang 2,65 detik tanpa tombol jeda, dan tampilan diam untuk prefers-reduced-motion. Aset awal selesai menjadi fallback jika aset baru gagal dimuat; Beranda tetap memakai aset awal. Gambar kuis aktivitas pada Stage 3 masih perlu dipilih secara khusus; kuis belum dibuat.
 
 Build dan enam pengujian otomatis lulus. Seluruh 30 langkah diuji di Chromium pada 320px. Contoh langkah dan halaman selesai diperiksa pada 320, 390, 768, 1440px tanpa overflow. Uji keyboard, ketukan ganda, fallback gambar, reset, dan penjagaan sesi lulus. Detail serta batas pengujian ada di laporan Stage 2.
+
+## Optimasi gambar
+
+Seluruh 35 PNG materi memiliki salinan WebP lossless: total 16.184.383 → 10.393.442 byte (berkurang 35,8%). Resolusi dan piksel RGBA identik, termasuk transparansi; aset Figma asli tetap disimpan. Rincian ukuran ada di `docs/IMAGE_OPTIMIZATION.json`. Angka ini adalah pengurangan ukuran file, bukan pengukuran waktu muat jaringan pengguna.
+
+Intro menyiapkan gambar langkah pertama, dan setiap langkah menyiapkan satu gambar berikutnya dengan prioritas rendah. Prefetch dilewati saat browser mengaktifkan Save-Data. File WebP bernama hash mendapat cache browser satu tahun melalui `vercel.json`; perubahan gambar menghasilkan URL baru. Header ini berlaku setelah deployment dan belum diuji pada production untuk branch ini.
+
+Setelah mengganti PNG sumber, jalankan `npm.cmd run assets:optimize` lalu sertakan salinan WebP, manifest `src/data/optimizedArtwork.ts`, dan laporan ukuran dalam commit. Build memeriksa hash serta kesamaan piksel tanpa mengompresi ulang; build gagal jika salinan tidak sesuai sumber. Optimasi memakai Sharp sebagai dependensi pengembangan, tanpa menambah library gambar ke aplikasi browser.
+
+Verifikasi lokal: build produksi dan enam pengujian lulus; seluruh 35 salinan lolos pembandingan piksel. Daftar materi menampilkan lima gambar WebP; alur Menggosok Gigi menampilkan keenam gambar hingga halaman selesai. Kecepatan koneksi lambat dan header cache production belum diukur.
 
 ## Berikutnya — hanya setelah persetujuan
 
