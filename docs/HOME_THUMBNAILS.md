@@ -17,6 +17,17 @@ Kedua timeline berulang 3.200 ms. Seluruh 615 track rotasi, translasi, skala, da
 
 ## Verifikasi
 
+### Pembaruan interaksi — 14 Oktober 2026
+
+- Berlaku untuk kedua kartu Beranda, Materi dan Kuis, sesuai konfirmasi pengguna.
+- Saat halaman dibuka, thumbnail tampil diam. Pointer mouse pada perangkat dengan kemampuan hover memutar pratinjau berulang selama berada di kartu; keluar dari kartu mengembalikan gambar ke posisi awal. Pointer sentuh tidak memicu hover.
+- Klik, ketukan, atau Enter memulai ulang animasi dari awal untuk satu siklus 3,2 detik. Event akhir animasi membuka halaman tujuan. Pilihan dikunci selama proses agar aktivasi berulang tidak menggandakan navigasi.
+- Ctrl/Cmd/Shift/Alt-click dan klik non-primer mempertahankan perilaku tautan bawaan browser. Timer dibersihkan saat komponen dilepas. Jika aset gagal, reduced motion aktif, atau animasi tidak mengirim event selesai, tersedia jalur navigasi cadangan; pemuatan aset tidak menahan pengguna tanpa batas.
+- Pemeriksaan lokal: build produksi lulus; browser menunjukkan kedua animasi awal `none`, pilihan Materi mempunyai satu iterasi dan tetap di Beranda saat animasi berjalan, lalu membuka daftar materi. Enter pada Kuis juga menunggu animasi lalu membuka halaman Kuis.
+- Batas pengujian interaksi: hover fisik, sentuhan pada perangkat asli, perubahan preferensi reduced motion, dan simulasi jaringan gagal belum diuji langsung. Pratinjau sempat memakai halaman lama dari server yang berhenti; server lokal baru telah dijalankan dan halaman dimuat ulang sebelum verifikasi.
+
+### Verifikasi aset awal — 13 Oktober 2026
+
 - Build produksi dan enam pengujian sesi/konten lulus. JavaScript hasil build 468,28 kB (126,53 kB gzip), CSS 35,31 kB (6,52 kB gzip).
 - Audit seluruh 205 file: non-kosong dan hash cocok dengan nama. Seluruh 615 track hasil factoring dibandingkan dengan snippet sumber; nilai dan easing sama.
 - Chromium lokal: kedua scene siap, seluruh 113 + 92 layer tersedia. Delapan sampel gerakan melintasi lebih dari satu putaran menunjukkan rotasi, skala, dan translasi berubah lalu kembali ke posisi awal, durasi 3,2 detik.

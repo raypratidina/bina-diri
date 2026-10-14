@@ -4,6 +4,7 @@
 .home-thumbnail-scene.is-ready { visibility: visible; }
 .home-thumbnail-layer { transform-origin: 0 0; animation-duration: var(--thumbnail-duration); animation-timing-function: linear; animation-iteration-count: infinite; animation-play-state: paused; }
 .home-thumbnail-scene.is-ready .home-thumbnail-layer { animation-play-state: running; }
+.home-thumbnail-scene.is-selected .home-thumbnail-layer { animation-iteration-count: 1; animation-fill-mode: forwards; }
 @media (prefers-reduced-motion: reduce) {
   .home-thumbnail-layer { animation: none !important; transform: none !important; }
 }
